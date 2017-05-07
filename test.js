@@ -12,6 +12,10 @@ test('interface is correct', () => {
   assert.throws(() => new Hoopy(0))
   assert.doesNotThrow(() => new Hoopy(1))
   assert.throws(() => new Hoopy(-1))
+  assert.throws(() => new Hoopy(1).push())
+  assert.throws(() => new Hoopy(1).pop())
+  assert.throws(() => new Hoopy(1).shift())
+  assert.throws(() => new Hoopy(1).unshift())
 })
 
 suite('instantiate, size=1:', () => {

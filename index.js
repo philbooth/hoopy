@@ -80,13 +80,14 @@ function getIndex (key, size) {
   return key % size
 }
 
-Hoopy.prototype.push = () => {
+const nop = () => {
   throw new Error('Not implemented')
 }
 
-Hoopy.prototype.pop = () => {
-  throw new Error('Not implemented')
-}
+Hoopy.prototype.push = nop
+Hoopy.prototype.pop = nop
+Hoopy.prototype.shift = nop
+Hoopy.prototype.unshift = nop
 
 module.exports = Hoopy
 
