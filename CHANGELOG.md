@@ -1,5 +1,10 @@
 # Change log
 
+## 0.1.2
+
+* chore: add unit test of Array.prototype.slice (557cdb7)
+* fix: handle error when attempting to coerce in isInteger (e4e80f9)
+
 ## 0.1.1
 
 * chore: trigger ci (b8ca7bd)
