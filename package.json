@@ -1,0 +1,36 @@
+{
+  "name": "hoopy",
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "Like an array, but rounder.",
+  "keywords": [
+    "data",
+    "structure",
+    "collection",
+    "array",
+    "circular",
+    "extends",
+    "proxy"
+  ],
+  "author": "Phil Booth <pmbooth@gmail.com> (https://philbooth.me/)",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "mocha --es_staging --ui tdd test.js",
+    "release": "release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philbooth/hoopy.git"
+  },
+  "homepage": "https://github.com/philbooth/hoopy#readme",
+  "bugs": {
+    "url": "https://github.com/philbooth/hoopy/issues"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.19.0",
+    "mocha": "^3.3.0",
+    "please-release-me": "^1.0.3"
+  }
+}
