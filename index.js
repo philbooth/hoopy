@@ -69,7 +69,13 @@ function isPositiveInteger (thing) {
 }
 
 function isInteger (thing) {
-  return +thing % 1 === 0
+  try {
+    return +thing % 1 === 0
+  } catch (error) {
+    // Coercing symbols to numbers throws an error
+  }
+
+  return false
 }
 
 function getIndex (key, size) {
