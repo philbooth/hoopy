@@ -61,8 +61,8 @@ const Hoopy = require('hoopy');
 ### Creating arrays
 
 ```js
-// Create a circular array containing 100 items
-const hoopy = new Hoopy(100);
+const hoopy = new Hoopy(10);
+assert(Array.isArray(hoopy));
 ```
 
 You must pass
@@ -73,11 +73,8 @@ otherwise it will throw.
 ### Accessing array items
 
 ```js
-// Fill the array with nonsense
-hoopy.fill('foo');
-
-// Print all the nonsense
 for (let i = 0; i < hoopy.length; ++i) {
+  hoopy[i] = i;
   console.log(hoopy[i]);
 }
 ```
@@ -108,7 +105,6 @@ work normally.
 ### Growing the array
 
 ```js
-// Add 50 more items to the array
 hoopy.grow(50);
 ```
 
