@@ -1,5 +1,11 @@
 # Change log
 
+## 0.1.1
+
+* chore: trigger ci (b8ca7bd)
+* chore: tidy the example code (bb08e45)
+* fix: ensure sane grow behaviour for overflowed items (4e47f98)
+
 ## 0.1.0
 
 * feature: implement basic circular array type (c17715a)
