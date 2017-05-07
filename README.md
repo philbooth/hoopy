@@ -113,6 +113,18 @@ adds items to the array.
 It takes one argument,
 which is the number
 of items to grow the array by.
+The new length of the array
+will be the old length
+plus the number you pass to `grow`.
+
+If the current state of the array
+includes overflowed indices,
+`grow` will take care
+to move those items
+in to the freshly-created
+available space,
+so that the correct order is maintained
+for your data.
 
 The caller is responsible
 for ensuring they don't overwrite

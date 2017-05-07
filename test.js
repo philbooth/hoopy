@@ -255,3 +255,53 @@ suite('instantiate, size=2:', () => {
   })
 })
 
+suite('instantiate and overflow, size=3:', () => {
+  let hoopy
+
+  setup(() => {
+    hoopy = new Hoopy(3)
+    hoopy[2] = 'foo'
+    hoopy[3] = 'bar'
+    hoopy[4] = 'baz'
+  })
+
+  test('data is correct', () => {
+    assert.equal(hoopy.length, 3)
+    assert.equal(hoopy[2], 'foo')
+    assert.equal(hoopy[3], 'bar')
+    assert.equal(hoopy[4], 'baz')
+    assert.equal(hoopy[0], hoopy[3])
+    assert.equal(hoopy[1], hoopy[4])
+  })
+
+  suite('grow, by=1:', () => {
+    setup(() => {
+      hoopy.grow(1)
+    })
+
+    test('data is correct', () => {
+      assert.equal(hoopy.length, 4)
+      assert.equal(hoopy[2], 'foo')
+      assert.equal(hoopy[3], 'bar')
+      assert.equal(hoopy[4], 'baz')
+      assert.equal(hoopy[0], hoopy[4])
+      assert.isUndefined(hoopy[1])
+    })
+  })
+
+  suite('grow, by=2:', () => {
+    setup(() => {
+      hoopy.grow(2)
+    })
+
+    test('data is correct', () => {
+      assert.equal(hoopy.length, 5)
+      assert.equal(hoopy[2], 'foo')
+      assert.equal(hoopy[3], 'bar')
+      assert.equal(hoopy[4], 'baz')
+      assert.isUndefined(hoopy[0])
+      assert.isUndefined(hoopy[1])
+    })
+  })
+})
+

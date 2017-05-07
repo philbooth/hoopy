@@ -24,7 +24,11 @@ class Hoopy extends Array {
 
       if (isIndexOverflowed) {
         for (i = 0; i <= index; ++i) {
-          this[size + i] = this[i]
+          let j = size + i
+          if (j >= newSize) {
+            j %= newSize
+          }
+          this[j] = this[i]
           this[i] = undefined
         }
       }
