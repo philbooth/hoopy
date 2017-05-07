@@ -274,6 +274,10 @@ suite('instantiate and overflow, size=3:', () => {
     assert.equal(hoopy[1], hoopy[4])
   })
 
+  test('slice works correctly', () => {
+    assert.equal(hoopy.slice(0, 3)[2], hoopy[2])
+  })
+
   suite('grow, by=1:', () => {
     setup(() => {
       hoopy.grow(1)
