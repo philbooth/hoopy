@@ -80,7 +80,7 @@ function getIndex (key, size) {
   return key % size
 }
 
-const nop = () => {
+function nop () {
   throw new Error('Not implemented')
 }
 
