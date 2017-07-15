@@ -1,5 +1,10 @@
 # Change log
 
+## 0.1.3
+
+* fix: note minimum required node version (37e4481)
+* chore: update authors (cc53233)
+
 ## 0.1.2
 
 * chore: add unit test of Array.prototype.slice (557cdb7)
